@@ -12,13 +12,13 @@
         <meta name="author" content="Ian Maurer">
       
       
-        <link rel="canonical" href="https://biomcp.org/tutorials/mcp-inspector/">
+        <link rel="canonical" href="https://biomcp.org/tutorials/cloudflare-worker-deployment/">
       
       
-        <link rel="prev" href="../claude-desktop/">
+        <link rel="prev" href="../cursor-ide/">
       
       
-        <link rel="next" href="../python-sdk/">
+        <link rel="next" href="../stytch_oauth_setup/">
       
       
       <link rel="icon" href="../../assets/favicon.ico">
@@ -26,7 +26,7 @@
     
     
       
-        <title>MCP Inspector - BioMCP</title>
+        <title>Cloudflare Worker Deployment - BioMCP</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#testing-biomcp-with-mcp-inspector-step-by-step-tutorial" class="md-skip">
+        <a href="#deploying-biomcp-as-a-cloudflare-worker" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              MCP Inspector
+              Cloudflare Worker Deployment
             
           </span>
         </div>
@@ -335,31 +335,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    MCP Inspector
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../mcp-inspector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,176 +348,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-the-mcp-inspector" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is the MCP Inspector?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-1-start-mcp-inspector" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 1: Start MCP Inspector
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-2-connect" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 2: Connect
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-list-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: List Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-test-biomcp-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Test BioMCP Tools
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 4: Test BioMCP Tools">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tool-1-article_searcher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 1: article_searcher
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-2-article_details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 2: article_details
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-3-trial_searcher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 3: trial_searcher
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-4-trial_protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 4: trial_protocol
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-5-trial_locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 5: trial_locations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-6-trial_outcomes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 6: trial_outcomes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-7-trial_references" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 7: trial_references
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-8-variant_searcher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 8: variant_searcher
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-9-variant_details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 9: variant_details
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-location-based-search" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Location-Based Search
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-variant-filtering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Variant Filtering
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -614,10 +423,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../cloudflare-worker-deployment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Cloudflare Worker Deployment
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -627,6 +457,203 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configure-your-remote-mcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configure Your Remote MCP Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configure Your Remote MCP Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-cloudflare-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure Cloudflare Worker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deploy-the-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Deploy the Worker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-remote-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Remote MCP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worker-connection-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worker Connection Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1144,145 +1171,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#what-is-the-mcp-inspector" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      What is the MCP Inspector?
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-1-start-mcp-inspector" class="md-nav__link">
+  <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Start MCP Inspector
+      Prerequisites
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-connect" class="md-nav__link">
+  <a href="#architecture" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Connect
+      Architecture
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-list-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 3: List Tools
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-4-test-biomcp-tools" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 4: Test BioMCP Tools
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 4: Test BioMCP Tools">
+    <nav class="md-nav" aria-label="Architecture">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tool-1-article_searcher" class="md-nav__link">
+  <a href="#architecture-diagram" class="md-nav__link">
     <span class="md-ellipsis">
-      Tool 1: article_searcher
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-2-article_details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 2: article_details
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-3-trial_searcher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 3: trial_searcher
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-4-trial_protocol" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 4: trial_protocol
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-5-trial_locations" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 5: trial_locations
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-6-trial_outcomes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 6: trial_outcomes
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-7-trial_references" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 7: trial_references
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-8-variant_searcher" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 8: variant_searcher
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tool-9-variant_details" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tool 9: variant_details
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-location-based-search" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Location-Based Search
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-variant-filtering" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing Variant Filtering
+      Architecture Diagram
     </span>
   </a>
   
@@ -1290,6 +1209,141 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-configure-your-remote-mcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Configure Your Remote MCP Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Configure Your Remote MCP Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-docker-compose" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Docker Compose
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manual-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manual Installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-configure-cloudflare-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configure Cloudflare Worker
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-deploy-the-worker" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Deploy the Worker
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-remote-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Benefits of Remote MCP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-development" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Development
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worker-connection-issues" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worker Connection Issues
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance Considerations
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
   
 </li>
       
@@ -1312,167 +1366,143 @@
   
 
 
-<h1 id="testing-biomcp-with-mcp-inspector-step-by-step-tutorial">Testing BioMCP with MCP Inspector: Step-by-Step Tutorial<a class="headerlink" href="#testing-biomcp-with-mcp-inspector-step-by-step-tutorial" title="Permanent link">&para;</a></h1>
-<p>This tutorial guides you through using the MCP Inspector to test and debug
-BioMCP integration. The MCP Inspector provides a user-friendly interface to
-interact with BioMCP directly, without needing to integrate with an AI
-assistant first.</p>
-<h2 id="what-is-the-mcp-inspector">What is the MCP Inspector?<a class="headerlink" href="#what-is-the-mcp-inspector" title="Permanent link">&para;</a></h2>
-<p>The MCP Inspector is a tool developed by Anthropic that allows you to:</p>
-<ul>
-<li>Test MCP servers like BioMCP directly</li>
-<li>Browse available tools and their parameters</li>
-<li>Send test requests and view responses</li>
-<li>Debug MCP server integrations</li>
-</ul>
-<h2 id="step-1-start-mcp-inspector">Step 1: Start MCP Inspector<a class="headerlink" href="#step-1-start-mcp-inspector" title="Permanent link">&para;</a></h2>
-<p>To run biomcp inside the MCP inspector, use the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>npx<span class="w"> </span>@modelcontextprotocol/inspector<span class="w"> </span>uv<span class="w"> </span>run<span class="w"> </span>--with<span class="w"> </span>biomcp-python<span class="w"> </span>biomcp<span class="w"> </span>run
-</code></pre></div>
-<p>This will launch the inspector interface (usually at http://127.0.0.1:6274).</p>
-<h2 id="step-2-connect">Step 2: Connect<a class="headerlink" href="#step-2-connect" title="Permanent link">&para;</a></h2>
-<p>Press the "Connect" button to establish a connection to the MCP server.</p>
-<h2 id="step-3-list-tools">Step 3: List Tools<a class="headerlink" href="#step-3-list-tools" title="Permanent link">&para;</a></h2>
-<p>The Inspector should display the available BioMCP tools:</p>
-<ul>
-<li><code>article_searcher</code></li>
-<li><code>article_details</code></li>
-<li><code>trial_searcher</code></li>
-<li><code>trial_protocol</code></li>
-<li><code>trial_locations</code></li>
-<li><code>trial_outcomes</code></li>
-<li><code>trial_references</code></li>
-<li><code>variant_searcher</code></li>
-<li><code>variant_details</code></li>
-</ul>
-<p>Click on any tool to see its description and input parameters.</p>
-<h2 id="step-4-test-biomcp-tools">Step 4: Test BioMCP Tools<a class="headerlink" href="#step-4-test-biomcp-tools" title="Permanent link">&para;</a></h2>
-<p>Let's test each BioMCP tool with example inputs. For each test:</p>
+<h1 id="deploying-biomcp-as-a-cloudflare-worker">Deploying BioMCP as a Cloudflare Worker<a class="headerlink" href="#deploying-biomcp-as-a-cloudflare-worker" title="Permanent link">&para;</a></h1>
+<p>This guide explains how to deploy BioMCP as a Cloudflare Worker using Server-Sent Events (SSE) for communication.</p>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>BioMCP now supports two deployment modes:</p>
 <ol>
-<li>Select the tool from the list</li>
-<li>Copy and paste the corresponding JSON input</li>
-<li>Click "Call Tool" to send the request</li>
-<li>Review the response in the Output section</li>
+<li><strong>Local STDIO Mode</strong>: The traditional mode where the server communicates via standard input/output.</li>
+<li><strong>Cloudflare Worker Mode</strong>: Deployment as a Cloudflare Worker using SSE for communication.</li>
 </ol>
-<h3 id="tool-1-article_searcher">Tool 1: article_searcher<a class="headerlink" href="#tool-1-article_searcher" title="Permanent link">&para;</a></h3>
-<p><strong>Input:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;genes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;EGFR&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;diseases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;NSCLC&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;BRAF V600E&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">&quot;keywords&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;MEK Inhibitors&quot;</span><span class="p">],</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">&quot;chemicals&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Afatinib&quot;</span><span class="p">]</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p">}</span>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A Cloudflare account with Workers enabled</li>
+<li><a href="https://developers.cloudflare.com/workers/wrangler/install-and-update/">Wrangler CLI</a> installed</li>
+<li>For local development of the Worker mode: <code>pip install biomcp-python[worker]</code></li>
+</ul>
+<h2 id="architecture">Architecture<a class="headerlink" href="#architecture" title="Permanent link">&para;</a></h2>
+<p>When deployed as a Cloudflare Worker, BioMCP works as follows:</p>
+<ol>
+<li>The Cloudflare Worker receives HTTP requests from clients</li>
+<li>The Worker forwards these requests to your remote MCP server</li>
+<li>The remote MCP server processes the requests and returns responses</li>
+<li>The Worker streams these responses back to clients using SSE</li>
+</ol>
+<h3 id="architecture-diagram">Architecture Diagram<a class="headerlink" href="#architecture-diagram" title="Permanent link">&para;</a></h3>
+<p>Below is an improved diagram of the setup:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+-----------------------+
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>|  Claude Desktop (or   |
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>|    other client)      |
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>+----------+------------+
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>           |
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>           v
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>+----------+------------+
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|   Cloudflare Worker   |
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>+----------+------------+
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>           |
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>           v
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>+-------------------------------+
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>|   FastMCP Python Service      |
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>|   (Docker, hosted server)     |
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>+-------------------------------+
 </code></pre></div>
-<p><strong>Example Output:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gh"># Record 1</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Pmid: 33402199
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Pmcid: PMC7786519
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Title: MEK inhibitors for the treatment of non-small cell lung cancer
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>Journal: J Hematol Oncol
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Date: 2021-01-05T00:00:00Z
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Doi: 10.1186/s13045-020-01025-7
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>Abstract:
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>BRAF and KRAS are two key oncogenes in the RAS/RAF/MEK/MAPK signaling
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>pathway. Concomitant mutations in both KRAS and BRAF genes have been
+<h2 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">&para;</a></h2>
+<h3 id="1-configure-your-remote-mcp-server">1. Configure Your Remote MCP Server<a class="headerlink" href="#1-configure-your-remote-mcp-server" title="Permanent link">&para;</a></h3>
+<p>First, you need to set up a remote MCP server that will handle the actual processing:</p>
+<h4 id="using-docker-compose">Using Docker Compose<a class="headerlink" href="#using-docker-compose" title="Permanent link">&para;</a></h4>
+<p>A Docker Compose file is now provided for building and deploying the remote FastMCP Python service. You must set the <code>TAG</code> variable to specify the image version:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">TAG</span><span class="o">=</span>latest<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 </code></pre></div>
-<h3 id="tool-2-article_details">Tool 2: article_details<a class="headerlink" href="#tool-2-article_details" title="Permanent link">&para;</a></h3>
-<p><strong>Input:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>21717063
+<ul>
+<li>The service will be accessible on the configured port (default: 8000).</li>
+<li>Ensure your server is reachable from Cloudflare Workers.</li>
+</ul>
+<h4 id="manual-installation">Manual Installation<a class="headerlink" href="#manual-installation" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Install with worker dependencies</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>pip<span class="w"> </span>install<span class="w"> </span>biomcp-python<span class="o">[</span>worker<span class="o">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Run the server in worker mode</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>biomcp<span class="w"> </span>run<span class="w"> </span>--mode<span class="w"> </span>worker<span class="w"> </span>--host<span class="w"> </span><span class="m">0</span>.0.0.0<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
-<p><strong>Example Output:</strong></p>
-<p>Same as <code>article_search</code> first record but with Full Text after the abstract:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Full Text:
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Introduction
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Lung cancer is the most common cause of cancer-related death worldwide,...
+<p>Make sure this server is accessible from the internet, or at least from Cloudflare Workers.</p>
+<h3 id="2-configure-cloudflare-worker">2. Configure Cloudflare Worker<a class="headerlink" href="#2-configure-cloudflare-worker" title="Permanent link">&para;</a></h3>
+<p>Edit the <code>wrangler.toml</code> file to point to your remote MCP server:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[vars]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">REMOTE_MCP_SERVER_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://your-remote-mcp-server.com/mcp&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Add an API key if your server requires authentication</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="n">MCP_SERVER_API_KEY</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-api-key&quot;</span>
 </code></pre></div>
-<h3 id="tool-3-trial_searcher">Tool 3: trial_searcher<a class="headerlink" href="#tool-3-trial_searcher" title="Permanent link">&para;</a></h3>
-<p><strong>Input:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Lung Cancer&quot;</span><span class="p">],</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nt">&quot;interventions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Pembrolizumab&quot;</span><span class="p">],</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">&quot;recruiting_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OPEN&quot;</span><span class="p">,</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">&quot;phase&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PHASE3&quot;</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="p">}</span>
+<h3 id="3-deploy-the-worker">3. Deploy the Worker<a class="headerlink" href="#3-deploy-the-worker" title="Permanent link">&para;</a></h3>
+<p>Use Wrangler to deploy your Worker:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Login to Cloudflare</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>npx<span class="w"> </span>wrangler@latest<span class="w"> </span>login
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1"># Deploy the worker</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>npx<span class="w"> </span>wrangler@latest<span class="w"> </span>deploy
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c1"># Tail logs for debugging</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>npx<span class="w"> </span>wrangler@latest<span class="w"> </span>tail
 </code></pre></div>
-<p><strong>Example Output:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="gh"># Record 1</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Nct Number: NCT06847334
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Study Title:
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>A Study to Compare the Efficacy, Safety, Immunogenicity, and
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>Pharmacokinetic Profile of HLX17 Vs. Keytruda® in the First-Line
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>Treatment of Advanced Non-squamous Non-small Cell Lung Cancer
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>Study Url: https://clinicaltrials.gov/study/NCT06847334
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Study Status: NOT_YET_RECRUITING
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>Brief Summary:
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>This is a multicentre, randomized, double-blind, parallel-controlled
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>integrated phase I/III clinical study to evaluate the similarity in
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>efficacy, safety, PK profile, and immunogenicity of HLX17 vs. Keytruda®(
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>US- and EU-sourced) in the first-line treatment of advanced non-squamous
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>...
+<h2 id="benefits-of-remote-mcp">Benefits of Remote MCP<a class="headerlink" href="#benefits-of-remote-mcp" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Scalability:</strong> Offloads heavy computation to a dedicated server, reducing load on the Worker and improving performance.</li>
+<li><strong>Security:</strong> The Worker acts as a secure proxy, hiding your backend and enabling API key protection.</li>
+<li><strong>Flexibility:</strong> You can update or scale the Python service independently of the Worker.</li>
+<li><strong>Debugging:</strong> Use <code>npx wrangler tail</code> for real-time logs and easier troubleshooting.</li>
+<li><strong>Modern Deployment:</strong> Docker Compose simplifies environment setup and reproducibility.</li>
+</ul>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<p>Once deployed, your Cloudflare Worker will be available at a URL like:
+<code>https://biomcp-worker.&lt;your-worker-subdomain&gt;.workers.dev</code></p>
+<p>Clients can connect to this endpoint using SSE:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1">// Example client-side JavaScript</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">eventSource</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">EventSource</span><span class="p">(</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="s2">&quot;https://biomcp-worker.&lt;your-worker-subdomain&gt;.workers.dev&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nx">eventSource</span><span class="p">.</span><span class="nx">onmessage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;Received:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">  </span><span class="c1">// Check for the end of the stream</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">data</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;[DONE]&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="nx">eventSource</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">};</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="nx">eventSource</span><span class="p">.</span><span class="nx">onerror</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s2">&quot;EventSource error:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">  </span><span class="nx">eventSource</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a><span class="p">};</span>
 </code></pre></div>
-<h3 id="tool-4-trial_protocol">Tool 4: trial_protocol<a class="headerlink" href="#tool-4-trial_protocol" title="Permanent link">&para;</a></h3>
-<h3 id="tool-5-trial_locations">Tool 5: trial_locations<a class="headerlink" href="#tool-5-trial_locations" title="Permanent link">&para;</a></h3>
-<h3 id="tool-6-trial_outcomes">Tool 6: trial_outcomes<a class="headerlink" href="#tool-6-trial_outcomes" title="Permanent link">&para;</a></h3>
-<h3 id="tool-7-trial_references">Tool 7: trial_references<a class="headerlink" href="#tool-7-trial_references" title="Permanent link">&para;</a></h3>
-<p>All trial "detail" tools work the same way by specifying the NCT ID.</p>
-<p><strong>Input:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>NCT04280705
+<h2 id="local-development">Local Development<a class="headerlink" href="#local-development" title="Permanent link">&para;</a></h2>
+<p>For local development and testing, you can run the worker mode locally:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Run the server in worker mode on localhost</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>biomcp<span class="w"> </span>run<span class="w"> </span>--mode<span class="w"> </span>worker<span class="w"> </span>--host<span class="w"> </span><span class="m">127</span>.0.0.1<span class="w"> </span>--port<span class="w"> </span><span class="m">8000</span>
 </code></pre></div>
-<p><strong>Example Output:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Url: https://clinicaltrials.gov/study/NCT04280705
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="gh"># Protocol Section</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="gu">## Identification Module</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Nct Id: NCT04280705
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>Brief Title: Adaptive COVID-19 Treatment Trial (ACTT)
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Official Title:
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>A Multicenter, Adaptive, Randomized Blinded Controlled Trial of the
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Safety and Efficacy of Investigational Therapeutics for the Treatment of
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>COVID-19 in Hospitalized Adults
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>...
+<p>Then use Wrangler to develop locally:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>npx<span class="w"> </span>wrangler@latest<span class="w"> </span>dev
 </code></pre></div>
-<h3 id="tool-8-variant_searcher">Tool 8: variant_searcher<a class="headerlink" href="#tool-8-variant_searcher" title="Permanent link">&para;</a></h3>
-<p><strong>Input:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;gene&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BRAF&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">&quot;hgvsp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;p.V600E&quot;</span><span class="p">,</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="tool-9-variant_details">Tool 9: variant_details<a class="headerlink" href="#tool-9-variant_details" title="Permanent link">&para;</a></h3>
-<p><strong>Input:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>rs113488022
-</code></pre></div>
-<p>or</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>chr7:g.140453136A&gt;T
-</code></pre></div>
-<h3 id="testing-location-based-search">Testing Location-Based Search<a class="headerlink" href="#testing-location-based-search" title="Permanent link">&para;</a></h3>
-<p><strong>Tool</strong>: <code>trial_searcher</code>
-<strong>Input</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">&quot;conditions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Breast Cancer&quot;</span><span class="p">],</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="nt">&quot;recruiting_status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OPEN&quot;</span><span class="p">,</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">42.3601</span><span class="p">,</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="nt">&quot;long&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-71.0589</span><span class="p">,</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="nt">&quot;distance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span>
-<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="p">}</span>
-</code></pre></div>
-<h3 id="testing-variant-filtering">Testing Variant Filtering<a class="headerlink" href="#testing-variant-filtering" title="Permanent link">&para;</a></h3>
-<p><strong>Tool</strong>: <code>variant_searcher</code>
-<strong>Input</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">&quot;gene&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;TP53&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nt">&quot;significance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;pathogenic&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="nt">&quot;max_frequency&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.01</span><span class="p">,</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="nt">&quot;cadd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="nt">&quot;size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="p">}</span>
-</code></pre></div>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<h3 id="worker-connection-issues">Worker Connection Issues<a class="headerlink" href="#worker-connection-issues" title="Permanent link">&para;</a></h3>
+<p>If the Worker cannot connect to your remote MCP server:</p>
+<ol>
+<li>Ensure your remote server is publicly accessible</li>
+<li>Check that the <code>REMOTE_MCP_SERVER_URL</code> is correctly set</li>
+<li>Verify any authentication requirements</li>
+</ol>
+<h3 id="performance-considerations">Performance Considerations<a class="headerlink" href="#performance-considerations" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cloudflare Workers have execution time limits (typically 30 seconds for free accounts)</li>
+<li>Consider implementing timeouts and chunking for large responses</li>
+<li>Monitor your Worker's performance in the Cloudflare dashboard</li>
+</ul>
+<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Always use HTTPS for communication between the Worker and your remote MCP server</li>
+<li>Consider implementing authentication for your remote MCP server</li>
+<li>Do not expose sensitive information in your Worker code</li>
+</ul>
 
 
 

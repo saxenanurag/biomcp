@@ -12,22 +12,28 @@
         <meta name="author" content="Ian Maurer">
       
       
+        <link rel="canonical" href="https://biomcp.org/tutorials/stytch_oauth_setup/">
       
       
+        <link rel="prev" href="../cloudflare-worker-deployment/">
       
-      <link rel="icon" href="/assets/favicon.ico">
+      
+        <link rel="next" href="../../cli/trials/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.7">
     
     
       
-        <title>BioMCP</title>
+        <title>Setting Up Stytch OAuth for BioMCP - BioMCP</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,9 +52,9 @@
       
     
     
-      <link rel="stylesheet" href="/assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,6 +79,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#setting-up-stytch-oauth-for-biomcp" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -85,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="BioMCP" class="md-header__button md-logo" aria-label="BioMCP" data-md-component="logo">
+    <a href="../.." title="BioMCP" class="md-header__button md-logo" aria-label="BioMCP" data-md-component="logo">
       
-  <img src="/assets/icon.png" alt="logo">
+  <img src="../../assets/icon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -104,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Setting Up Stytch OAuth for BioMCP
             
           </span>
         </div>
@@ -217,9 +228,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="BioMCP" class="md-nav__button md-logo" aria-label="BioMCP" data-md-component="logo">
+    <a href="../.." title="BioMCP" class="md-nav__button md-logo" aria-label="BioMCP" data-md-component="logo">
       
-  <img src="/assets/icon.png" alt="logo">
+  <img src="../../assets/icon.png" alt="logo">
 
     </a>
     BioMCP
@@ -246,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -264,17 +275,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -289,7 +302,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -303,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/claude-desktop/" class="md-nav__link">
+      <a href="../claude-desktop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -325,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/mcp-inspector/" class="md-nav__link">
+      <a href="../mcp-inspector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -347,7 +360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/python-sdk/" class="md-nav__link">
+      <a href="../python-sdk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/mcp-client/" class="md-nav__link">
+      <a href="../mcp-client/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -391,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/cursor-ide/" class="md-nav__link">
+      <a href="../cursor-ide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -413,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/tutorials/cloudflare-worker-deployment/" class="md-nav__link">
+      <a href="../cloudflare-worker-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -432,10 +445,31 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/tutorials/stytch_oauth_setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Setting Up Stytch OAuth for BioMCP
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -445,6 +479,98 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-your-stytch-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Your Stytch Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-biomcp-with-stytch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring BioMCP with Stytch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth-flow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth Flow Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -500,7 +626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cli/trials/" class="md-nav__link">
+      <a href="../../cli/trials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -522,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cli/articles/" class="md-nav__link">
+      <a href="../../cli/articles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +670,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cli/variants/" class="md-nav__link">
+      <a href="../../cli/variants/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -566,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/cli/health/" class="md-nav__link">
+      <a href="../../cli/health/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -631,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/apis/clinicaltrials_gov/" class="md-nav__link">
+      <a href="../../apis/clinicaltrials_gov/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/apis/pubtator3_api/" class="md-nav__link">
+      <a href="../../apis/pubtator3_api/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/apis/myvariant_info/" class="md-nav__link">
+      <a href="../../apis/myvariant_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -740,7 +866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/what-is-biomcp/" class="md-nav__link">
+      <a href="../../blog/what-is-biomcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -762,7 +888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/ai-assisted-clinical-trial-search-analysis/" class="md-nav__link">
+      <a href="../../blog/ai-assisted-clinical-trial-search-analysis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/blog/researcher-persona-resource/" class="md-nav__link">
+      <a href="../../blog/researcher-persona-resource/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -849,7 +975,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/troubleshooting/macos/" class="md-nav__link">
+      <a href="../../troubleshooting/macos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -878,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/genomoncology/" class="md-nav__link">
+      <a href="../../genomoncology/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -899,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/changelog/" class="md-nav__link">
+      <a href="../../changelog/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -930,6 +1056,88 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-your-stytch-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setting Up Your Stytch Account
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-biomcp-with-stytch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuring BioMCP with Stytch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#oauth-flow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      OAuth Flow Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Endpoints
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Considerations
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -941,8 +1149,148 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+  
+  
+
+
+<h1 id="setting-up-stytch-oauth-for-biomcp">Setting Up Stytch OAuth for BioMCP<a class="headerlink" href="#setting-up-stytch-oauth-for-biomcp" title="Permanent link">&para;</a></h1>
+<p>This document outlines the steps required to set up Stytch OAuth authentication for the BioMCP application.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A Stytch account (sign up at <a href="https://stytch.com/">Stytch</a>)</li>
+<li>Access to the BioMCP codebase</li>
+</ul>
+<h2 id="setting-up-your-stytch-account">Setting Up Your Stytch Account<a class="headerlink" href="#setting-up-your-stytch-account" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Create a Stytch Account</strong></p>
+</li>
+<li>
+<p>Sign up at <a href="https://stytch.com/">Stytch</a></p>
+</li>
+<li>
+<p>Select "Consumer Authentication" when prompted during the setup process</p>
+</li>
+<li>
+<p><strong>Configure the Stytch Project</strong></p>
+</li>
+<li>
+<p>In the Stytch dashboard, navigate to "Frontend SDKs" and enable the frontend SDK</p>
+</li>
+<li>Navigate to "Connected Apps" and enable "Dynamic Client Registration"</li>
+<li>
+<p>This allows MCP clients to register themselves dynamically with Stytch</p>
+</li>
+<li>
+<p><strong>Retrieve Your Credentials</strong></p>
+</li>
+<li>Go to "Project Settings" in the Stytch dashboard</li>
+<li>Note down the following credentials:<ul>
+<li>Project ID</li>
+<li>Secret (API Key)</li>
+<li>Public Token</li>
+</ul>
+</li>
+</ol>
+<h2 id="configuring-biomcp-with-stytch">Configuring BioMCP with Stytch<a class="headerlink" href="#configuring-biomcp-with-stytch" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Update the Wrangler Configuration</strong></p>
+</li>
+<li>
+<p>Open <code>wrangler.toml</code> in the BioMCP project</p>
+</li>
+<li>Update the following variables with your Stytch credentials:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">STYTCH_PROJECT_ID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-project-id&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">STYTCH_SECRET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-secret-key&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">STYTCH_PUBLIC_TOKEN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-public-token&quot;</span>
+</code></pre></div></li>
+<li>For development, use the test environment:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">STYTCH_API_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://test.stytch.com/v1&quot;</span>
+</code></pre></div></li>
+<li>
+<p>For production, use:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">STYTCH_API_URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;https://api.stytch.com/v1&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configure the OAuth KV Namespace</strong></p>
+</li>
+<li>
+<p>Create a KV namespace in Cloudflare for storing OAuth tokens and state</p>
+</li>
+<li>
+<p>Update the KV namespace ID in <code>wrangler.toml</code>:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">[[kv_namespaces]]</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">binding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;OAUTH_KV&quot;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-kv-namespace-id&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Configure JWT Secret</strong></p>
+</li>
+<li>Set a strong JWT secret for token signing:
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">JWT_SECRET</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;your-secure-jwt-secret&quot;</span>
+</code></pre></div></li>
+</ol>
+<h2 id="oauth-flow-overview">OAuth Flow Overview<a class="headerlink" href="#oauth-flow-overview" title="Permanent link">&para;</a></h2>
+<p>The BioMCP application uses the following OAuth flow:</p>
+<ol>
+<li><strong>Discovery</strong>: MCP clients fetch OAuth metadata to locate Stytch authorization endpoints</li>
+<li><strong>Registration</strong>: MCP clients dynamically register with Stytch</li>
+<li><strong>Authorization</strong>: Users are redirected to Stytch for authentication and consent</li>
+<li><strong>Token Exchange</strong>: After consent, authorization codes are exchanged for access tokens</li>
+<li><strong>MCP Connection</strong>: MCP clients connect to the BioMCP server using OAuth access tokens</li>
+</ol>
+<h2 id="endpoints">Endpoints<a class="headerlink" href="#endpoints" title="Permanent link">&para;</a></h2>
+<p>The worker implements the following OAuth endpoints:</p>
+<ul>
+<li><code>/.well-known/oauth-authorization-server</code>: OAuth server metadata</li>
+<li><code>/authorize</code>: OAuth authorization endpoint</li>
+<li><code>/callback</code>: OAuth callback endpoint</li>
+<li><code>/token</code>: Token exchange endpoint</li>
+</ul>
+<h2 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h2>
+<p>To test the OAuth implementation:</p>
+<ol>
+<li>Deploy the worker to Cloudflare:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>wrangler deploy
+</code></pre></div>
+<ol>
+<li>Use the MCP Inspector or another OAuth client to test the flow:</li>
+<li>Set the OAuth discovery URL to: <code>https://your-worker.workers.dev/.well-known/oauth-authorization-server</code></li>
+<li>The inspector will guide you through the OAuth flow</li>
+</ol>
+<h2 id="troubleshooting">Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>JWT Validation Issues</strong>: Ensure the JWKS endpoint is correctly configured and accessible</li>
+<li><strong>Callback Errors</strong>: Check that the redirect URIs are properly registered and match exactly</li>
+<li><strong>Token Exchange Failures</strong>: Verify that the authorization code is valid and not expired</li>
+</ul>
+<h2 id="security-considerations">Security Considerations<a class="headerlink" href="#security-considerations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Always use HTTPS for all OAuth endpoints</li>
+<li>Implement proper CORS headers for cross-origin requests</li>
+<li>Regularly rotate the JWT secret</li>
+<li>Use the production Stytch API URL for production environments</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1006,10 +1354,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": [], "search": "/assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
